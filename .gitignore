@@ -39,3 +39,5 @@ Thumbs.db
 ######################
 .idea/
 .idea/*
+# Ignore application configuration
+/config/application.yml
