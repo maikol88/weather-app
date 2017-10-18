@@ -1,1 +1,15 @@
 <h1>Weather app</h1>
+<p>Date: <%= @weather_lookup.today[:date] %></p>
+<p>High: <%= @weather_lookup.today[:high] %></p>
+<p>Low: <%= @weather_lookup.today[:low] %></p>
+<p>Condition: <%= @weather_lookup.today[:condition] %></p>
+<p>Icon: <%= @weather_lookup.today[:icon] %></p>
+<p>Humidity: <%= @weather_lookup.today[:humidity] %></p>
+<p>Feels like: <%= @weather_lookup.today[:feelslike] %></p>
+<p>Chance of rain: <%= @weather_lookup.today[:chance_rain] %></p>
+<p>Snow inches: <%= @weather_lookup.today[:snow_inches] %></p>
+
+<%= @weather_lookup.hourly.each do |hourly_obj| %>
+  <p>Time: <%= hourly_obj[:time] %> Temp: <%= hourly_obj[:temp] %> </p>
+<% end %>
+
