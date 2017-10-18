@@ -9,7 +9,7 @@
 <p>Chance of rain: <%= @weather_lookup.today[:chance_rain] %></p>
 <p>Snow inches: <%= @weather_lookup.today[:snow_inches] %></p>
 
-<%= @weather_lookup.hourly.each do |hourly_obj| %>
+<% @weather_lookup.hourly.each do |hourly_obj| %>
   <p>Time: <%= hourly_obj[:time] %> Temp: <%= hourly_obj[:temp] %> </p>
 <% end %>
 

@@ -22,7 +22,9 @@ class WeatherLookup
        chance_rain: response_hrly['hourly_forecast'][0]['pop'],
        snow_inches: response_hrly['hourly_forecast'][0]['snow']['english']
       }
+
     self.hourly = []
+
     10.times do |single_hour|
       time_temp = {
           time: response_hrly['hourly_forecast'][single_hour]['FCTTIME']['civil'],
@@ -30,11 +32,6 @@ class WeatherLookup
       }
       self.hourly << time_temp
     end
-
-
-
-
-
-
   end
+
 end
